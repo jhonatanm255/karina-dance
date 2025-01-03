@@ -1,36 +1,4 @@
-// import React from 'react';
-// import Navbar from './components/Navbar';
-// import Hero from './components/Hero';
-// import About from './components/About';
-// import Instructor from './components/Instructor';
-// import Gallery from './components/Gallery';
-// import Events from './components/Events';
-// import Achievements from './components/Achievements';
-// import Testimonials from './components/Testimonials';
-// import Footer from './components/Footer';
-
-// function App() {
-//   return (
-//     <div className="min-h-screen">
-//       <Navbar />
-//       <Hero />
-//       <About />
-//       <Instructor />
-//       <Gallery />
-//       <Achievements />
-//       <Events />
-//       <Testimonials />
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
-
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
 

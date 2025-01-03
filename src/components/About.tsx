@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart, Star, Users } from 'lucide-react';
 
 export default function About() {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Ballerina from "../assets/ballerina-2.mp4";
 
 export default function Intro() {

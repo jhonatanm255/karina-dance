@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X, Star } from 'lucide-react';
 
 export default function Navbar() {
@@ -35,7 +35,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-pink-300"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
             </button>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function Navbar() {
           <a href="#testimonials" className="block text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-base font-medium">Testimonios</a>
           <button 
             onClick={() => window.location.href = '#contact'}
-            className="w-full bg-pink-400 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-pink-400 transition-colors"
+            className="w-full bg-pink-500 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-pink-400 transition-colors"
           >
             Clase Gratis
           </button>
