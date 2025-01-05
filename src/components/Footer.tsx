@@ -33,8 +33,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 mt-8 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} Karina Dance Academy. Todos los derechos
-            reservados.
+            © {new Date().getFullYear()} Karina Dance Academy.
           </p>
         </div>
       </div>
