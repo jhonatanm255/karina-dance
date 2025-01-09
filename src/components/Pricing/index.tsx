@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import ScrollReveal from "scrollreveal"; // Asegúrate de importar ScrollReveal
+import ScrollReveal from "scrollreveal";
 
 import PriceCard from "./PriceCard";
 

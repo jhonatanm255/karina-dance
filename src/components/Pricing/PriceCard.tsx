@@ -1,4 +1,3 @@
-
 import { Check } from "lucide-react";
 
 interface PriceCardProps {

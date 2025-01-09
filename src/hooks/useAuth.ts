@@ -45,3 +45,26 @@ export function useAuth() {
 
   return { user, error, signIn, signOut: signOutUser };
 }
+
+
+
+
+
+// import { useState, useEffect } from "react";
+// import { User } from "firebase/auth";
+// import { auth } from "../lib/firebase";
+
+// export function useAuth() {
+//   const [user, setUser] = useState<User | null>(auth.currentUser);
+//   const [error, setError] = useState<string | null>(null);
+
+//   useEffect(() => {
+//     const unsubscribe = auth.onAuthStateChanged((user) => {
+//       setUser(user);
+//     });
+
+//     return () => unsubscribe();
+//   }, []);
+
+//   return { user, error };
+// }

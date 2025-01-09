@@ -2,6 +2,7 @@ import { SocialLinks } from "./ui/SocialLinks";
 import { ContactInfo } from "./ui/ContactInfo";
 import { QuickLinks } from "./ui/QuickLinks";
 import { Schedule } from "./ui/Schedule";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -35,6 +36,9 @@ export default function Footer() {
           <p className="text-gray-400">
             © {new Date().getFullYear()} Karina Dance Academy.
           </p>
+          <Link to="/admin" className="text-pink-300 hover:underline">
+            Admin
+          </Link>
         </div>
       </div>
     </footer>
