@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal"; // Asegúrate de importar ScrollReveal
+
 import PriceCard from "./PriceCard";
 
 const plans = [
@@ -39,6 +42,37 @@ const plans = [
 ];
 
 export default function Pricing() {
+  useEffect(() => {
+    // Configuración de ScrollReveal
+    ScrollReveal().reveal(".pricing-title", {
+      delay: 300,
+      distance: "50px",
+      origin: "bottom",
+      opacity: 0,
+      duration: 800,
+      easing: "ease-in-out",
+    });
+
+    ScrollReveal().reveal(".pricing-subtitle", {
+      delay: 400,
+      distance: "50px",
+      origin: "bottom",
+      opacity: 0,
+      duration: 800,
+      easing: "ease-in-out",
+    });
+
+    ScrollReveal().reveal(".pricing-card", {
+      delay: 500,
+      distance: "50px",
+      origin: "bottom",
+      opacity: 0,
+      duration: 800,
+      easing: "ease-in-out",
+      interval: 200, // Para que cada tarjeta tenga un retraso incremental
+    });
+  }, []);
+
   return (
     <section
       id="pricing"
@@ -46,10 +80,10 @@ export default function Pricing() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4 pricing-title">
             Planes y Precios
           </h2>
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="text-lg text-gray-600 mb-4 pricing-subtitle">
             Elige el plan perfecto para tu desarrollo artístico
           </p>
           <p className="text-sm text-gray-500">
@@ -60,7 +94,9 @@ export default function Pricing() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <PriceCard key={index} {...plan} />
+            <div key={index} className="pricing-card">
+              <PriceCard {...plan} />
+            </div>
           ))}
         </div>
       </div>

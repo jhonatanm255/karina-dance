@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
+
 interface ProductCardProps {
   name: string;
   price: string;
@@ -11,8 +14,19 @@ export default function ProductCard({
   image,
   description,
 }: ProductCardProps) {
+  useEffect(() => {
+    ScrollReveal().reveal(".product-card", {
+      delay: 300,
+      distance: "50px",
+      origin: "bottom",
+      opacity: 0,
+      duration: 800,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105">
+    <div className="product-card bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105">
       <div className="relative aspect-square">
         <img src={image} alt={name} className="w-full h-full object-cover" />
         <div className="absolute top-2 right-2">

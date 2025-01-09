@@ -95,55 +95,55 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline">
               <a
                 href="#home"
-                className="text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-pink-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Inicio
               </a>
               <a
                 href="#about"
-                className="text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-pink-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Sobre Nosotros
               </a>
               <a
                 href="#instructor"
-                className="text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-pink-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Instructora
               </a>
               <a
                 href="#gallery"
-                className="text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-pink-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Galería
               </a>
               <a
                 href="#achievements"
-                className="text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-pink-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Reconocimientos
               </a>
               <a
                 href="#testimonials"
-                className="text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-pink-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Testimonios
               </a>
               <a
                 href="#pricing"
-                className="text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-pink-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Precios
               </a>
               <a
                 href="#merchandise"
-                className="text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-pink-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Tienda
               </a>
               <button
                 onClick={() => (window.location.href = "#contact")}
-                className="bg-pink-400 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-pink-500 transition-colors"
+                className="bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-500 transition-colors"
               >
                 Clase Gratis
               </button>
@@ -229,7 +229,7 @@ export default function Navbar() {
           </a>
           <button
             onClick={() => (window.location.href = "#contact")}
-            className="w-full bg-pink-500 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-pink-400 transition-colors"
+            className="w-full bg-pink-500 text-white px-4 py-2 rounded-full text-base font-medium hover:bg-pink-400 transition-colors"
           >
             Clase Gratis
           </button>
