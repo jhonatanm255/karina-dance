@@ -8,7 +8,7 @@ export default function Navbar() {
   useEffect(() => {
     const sr = ScrollReveal();
     sr.reveal(".navbar", {
-      delay: 2500,
+      delay: 2200,
       duration: 2000,
       opacity: 0,
       distance: "20px",
