@@ -6,43 +6,52 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import img1 from "../assets/gallery-img/img-1.jpg"; 
+import img5 from "../assets/gallery-img/img-5.jpg";
+import img7 from "../assets/gallery-img/img-7.jpg";
+import img10 from "../assets/gallery-img/img-10.jpg";
+import img11 from "../assets/gallery-img/img-11.jpg";
+import img12 from "../assets/gallery-img/img-12.jpg";
+import img14 from "../assets/gallery-img/img-14.jpg";
+import img16 from "../assets/gallery-img/img-16.jpg";
+import img17 from "../assets/gallery-img/img-17.jpg";
 
 export default function Gallery() {
   const images = [
     {
-      url: "../src/assets/gallery-img/img-1.jpg",
+      url: img1,
       alt: "Bailarina practicando",
     },
     {
-      url: "../src/assets/gallery-img/img-5.jpg",
+      url: img5,
       alt: "Bailarina practicando",
     },
     {
-      url: "../src/assets/gallery-img/img-7.jpg",
+      url: img7,
       alt: "Bailarina practicando",
     },
     {
-      url: "../src/assets/gallery-img/img-10.jpg",
+      url: img10,
       alt: "Bailarina practicando",
     },
     {
-      url: "../src/assets/gallery-img/img-11.jpg",
+      url: img11,
       alt: "Bailarina practicando",
     },
     {
-      url: "../src/assets/gallery-img/img-12.jpg",
+      url: img12,
       alt: "Bailarina practicando",
     },
     {
-      url: "../src/assets/gallery-img/img-14.jpg",
+      url: img14,
       alt: "Bailarina practicando",
     },
     {
-      url: "../src/assets/gallery-img/img-16.jpg",
+      url: img16,
       alt: "Bailarina practicando",
     },
     {
-      url: "../src/assets/gallery-img/img-17.jpg",
+      url: img17,
       alt: "Bailarina practicando",
     },
   ];
