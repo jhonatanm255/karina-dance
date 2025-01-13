@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { ArrowRight } from "lucide-react";
+import img2 from "../assets/gallery-img/img-2.jpg";
 
 export default function Hero() {
   useEffect(() => {
@@ -44,7 +45,7 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex items-center">
       <div id="hero-image" className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1508807526345-15e9b5f4eaff?auto=format&fit=crop&q=80"
+          src={img2}
           alt="Bailarinas en práctica"
           className="w-full h-full object-cover"
         />

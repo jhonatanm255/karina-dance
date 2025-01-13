@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { Award, BookOpen, Heart } from "lucide-react";
+import profesora from "../assets/gallery-img/profesora.jpg";
 
 export default function Instructor() {
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function Instructor() {
           <div className="relative">
             <img
               id="instructor-image"
-              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80"
+              src={profesora}
               alt="Directora María Fernández"
               className="rounded-lg shadow-xl w-full h-[500px] object-cover"
             />
