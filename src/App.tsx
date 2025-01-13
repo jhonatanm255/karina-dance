@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
@@ -16,7 +16,7 @@ const Pricing = lazy(() => import("./components/Pricing"));
 const Merchandise = lazy(() => import("./components/Merchandise"));
 const Footer = lazy(() => import("./components/Footer"));
 const WhatsappButton = lazy(() => import("./components/WhatsappBtn"));
-const AdminPanel = lazy(() => import("./components/admin/AdminPanel")); // Asegúrate de importar el componente AdminPanel
+const AdminPanel = lazy(() => import("./components/admin/AdminPanel"));
 
 function App() {
   return (

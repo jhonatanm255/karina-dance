@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer id="footer" className="bg-gray-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="text-center md:text-left">
@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="text-center md:text-left">
+          <div className="flex justify-center md:text-left">
             <QuickLinks />
           </div>
 
@@ -27,7 +27,7 @@ export default function Footer() {
             <ContactInfo />
           </div>
 
-          <div className="text-center md:text-left">
+          <div className="flex justify-center md:text-left">
             <Schedule />
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function Footer() {
           <p className="text-gray-400">
             © {new Date().getFullYear()} Karina Dance Academy.
           </p>
-          <Link to="/admin" className="text-pink-300 hover:underline">
+          <Link to="/admin" className="text-pink-500 hover:underline">
             Admin
           </Link>
         </div>

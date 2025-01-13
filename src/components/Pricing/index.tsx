@@ -1,47 +1,12 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../lib/firebase"; // Ajusta la importación de db según tu configuración
 import ScrollReveal from "scrollreveal";
-
 import PriceCard from "./PriceCard";
 
-const plans = [
-  {
-    name: "Básico",
-    price: "$49",
-    features: [
-      "2 clases por semana",
-      "Acceso a sala de práctica",
-      "Clase de prueba gratis",
-      "Vestuario básico incluido",
-    ],
-  },
-  {
-    name: "Premium",
-    price: "$89",
-    features: [
-      "4 clases por semana",
-      "Acceso ilimitado a sala de práctica",
-      "Clase de prueba gratis",
-      "Vestuario completo incluido",
-      "Participación en eventos",
-      "Clases privadas mensuales",
-    ],
-    popular: true,
-  },
-  {
-    name: "Elite",
-    price: "$129",
-    features: [
-      "Clases ilimitadas",
-      "Acceso total a instalaciones",
-      "Vestuario premium incluido",
-      "Participación en competencias",
-      "Clases privadas semanales",
-      "Workshops exclusivos",
-    ],
-  },
-];
-
 export default function Pricing() {
+  const [plans, setPlans] = useState<any[]>([]);
+
   useEffect(() => {
     // Configuración de ScrollReveal
     ScrollReveal().reveal(".pricing-title", {
@@ -69,8 +34,24 @@ export default function Pricing() {
       opacity: 0,
       duration: 800,
       easing: "ease-in-out",
-      interval: 200, // Para que cada tarjeta tenga un retraso incremental
+      interval: 200,
     });
+
+    // Cargar los planes desde Firestore
+    const loadPlans = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "plans"));
+        const loadedPlans = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setPlans(loadedPlans);
+      } catch (err) {
+        console.error("Error al cargar los planes:", err);
+      }
+    };
+
+    loadPlans();
   }, []);
 
   return (

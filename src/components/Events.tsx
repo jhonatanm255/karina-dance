@@ -62,7 +62,7 @@ export default function Events() {
             events.map((event) => (
               <div
                 key={event.id}
-                className="event-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow transform hover:scale-105"
+                className="event-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-transform transform hover:scale-105 duration-300"
               >
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{event.title}</h3>

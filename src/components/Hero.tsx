@@ -8,7 +8,7 @@ export default function Hero() {
 
     // Configuración para los elementos del Hero
     sr.reveal("#hero-image", {
-      delay: 2000, // Retraso de 5 segundos
+      delay: 2000, // Retraso de 2 segundos
       duration: 2000,
       distance: "50px",
       origin: "bottom",

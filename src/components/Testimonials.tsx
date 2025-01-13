@@ -17,15 +17,13 @@ import { collection, getDocs, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 
 export default function Testimonials() {
-  const { user, signIn, signOut } = useAuth(); // Control de autenticación
+  const { user, signIn, signOut } = useAuth();
   const [newTestimonial, setNewTestimonial] = useState("");
-  const [errorMessage, setErrorMessage] = useState<string | null>(null); // Para mostrar un mensaje de error
-  const [testimonials, setTestimonials] = useState<any[]>([]); // Estado para almacenar los testimonios
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [testimonials, setTestimonials] = useState<any[]>([]);
 
-  // Expresión regular para permitir solo letras, números y algunos signos
   const testimonialRegex = /^[a-zA-Z0-9\s.,!?'"()-]*$/;
 
-  // Obtener los testimonios desde Firebase al cargar el componente
   useEffect(() => {
     const fetchTestimonials = async () => {
       const querySnapshot = await getDocs(collection(db, "testimonials"));
@@ -36,7 +34,7 @@ export default function Testimonials() {
     fetchTestimonials();
   }, []);
 
-  const handleSubmitTestimonial = async (e) => {
+  const handleSubmitTestimonial = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!user) {
@@ -44,7 +42,6 @@ export default function Testimonials() {
       return;
     }
 
-    // Validar que el testimonio no esté vacío
     if (!newTestimonial.trim()) {
       Swal.fire({
         icon: "warning",
@@ -54,7 +51,6 @@ export default function Testimonials() {
       return;
     }
 
-    // Validar el testimonio usando la expresión regular
     if (!testimonialRegex.test(newTestimonial)) {
       Swal.fire({
         icon: "error",
@@ -64,25 +60,19 @@ export default function Testimonials() {
       return;
     }
 
-    // Crear un nuevo testimonio y guardarlo en Firebase
     try {
       const newTestimonialData = {
-        name: user.displayName || "Usuario anónimo", // Usar nombre predeterminado si no está disponible
+        name: user.displayName || "Usuario anónimo",
         content: newTestimonial,
-        avatar: user.photoURL || "https://via.placeholder.com/150", // Foto predeterminada si no está disponible
+        avatar: user?.photoURL || "https://via.placeholder.com/150",
       };
 
-      // Guardar el testimonio en Firebase
       await addDoc(collection(db, "testimonials"), newTestimonialData);
 
-      // Actualizar el estado de los testimonios para incluir el nuevo testimonio
       setTestimonials((prevState) => [newTestimonialData, ...prevState]);
-
-      // Limpiar el formulario
       setNewTestimonial("");
-      setErrorMessage(null); // Limpiar mensaje de error al enviar testimonio
+      setErrorMessage(null);
 
-      // Mostrar notificación de éxito
       Swal.fire({
         icon: "success",
         title: "¡Testimonio enviado!",
@@ -90,7 +80,6 @@ export default function Testimonials() {
       });
     } catch (error) {
       console.error("Error al agregar testimonio:", error);
-      // Mostrar notificación de error en caso de fallar
       Swal.fire({
         icon: "error",
         title: "Error",
@@ -114,7 +103,6 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Mostrar mensaje si no hay testimonios */}
         {testimonials.length === 0 ? (
           <div className="text-center">
             <p className="text-sm text-pink-400">
@@ -153,9 +141,6 @@ export default function Testimonials() {
                   <h4 className="font-semibold text-gray-900">
                     {testimonial.name}
                   </h4>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {testimonial.role}
-                  </p>
                   <div className="flex justify-center mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -173,12 +158,25 @@ export default function Testimonials() {
           </Swiper>
         )}
 
-        <div className="max-w-2xl mx-auto mt-16">
+        <div className="max-w-2xl mx-auto mt-12">
           {user ? (
             <form onSubmit={handleSubmitTestimonial}>
               {errorMessage && (
                 <p className="text-red-500 mb-4">{errorMessage}</p>
               )}
+
+              {/* Mostrar foto y nombre del usuario autenticado */}
+              <div className="flex items-center mb-4">
+                <img
+                  src={user.photoURL || "https://via.placeholder.com/150"}
+                  alt={user.displayName || "Usuario anónimo"}
+                  className="w-12 h-12 rounded-full object-cover mr-4"
+                />
+                <h4 className="font-semibold text-gray-900">
+                  {user.displayName || "Usuario anónimo"}
+                </h4>
+              </div>
+
               <textarea
                 value={newTestimonial}
                 onChange={(e) => setNewTestimonial(e.target.value)}
@@ -226,3 +224,5 @@ export default function Testimonials() {
     </section>
   );
 }
+
+

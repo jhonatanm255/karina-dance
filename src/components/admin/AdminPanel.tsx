@@ -43,7 +43,7 @@ export default function AdminPanel() {
           <TabsList>
             <TabsTrigger value="gallery">Galería</TabsTrigger>
             <TabsTrigger value="testimonials">Testimonios</TabsTrigger>
-            <TabsTrigger value="pricing">Planes y Precios</TabsTrigger>
+            <TabsTrigger value="pricing">Planes</TabsTrigger>
             <TabsTrigger value="shop">Tienda</TabsTrigger>
             <TabsTrigger value="events">Eventos</TabsTrigger>
           </TabsList>
