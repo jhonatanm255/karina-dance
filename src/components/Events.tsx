@@ -66,6 +66,7 @@ export default function Events() {
               >
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
+                  
                   <div className="flex items-center text-gray-600 mb-2">
                     <Calendar className="w-4 h-4 mr-2" />
                     <span>{event.date}</span>

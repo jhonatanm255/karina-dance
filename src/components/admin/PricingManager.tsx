@@ -164,6 +164,31 @@ export default function PricingManager() {
 
   return (
     <div className="space-y-6">
+      <div className="mt-8">
+        <h3 className="text-xl font-semibold">Crear un nuevo plan</h3>
+        <input
+          type="text"
+          placeholder="Nombre del plan"
+          value={newPlan.name}
+          onChange={(e) => setNewPlan({ ...newPlan, name: e.target.value })}
+          className="w-full p-2 mt-2 border rounded lg:block lg:w-1/3"
+        />
+        <input
+          type="text"
+          placeholder="Precio"
+          value={newPlan.price}
+          onChange={(e) => setNewPlan({ ...newPlan, price: e.target.value })}
+          className="w-full p-2 mt-2 border rounded lg:block lg:w-1/3"
+        />
+        <button
+          onClick={handleCreatePlan}
+          className="flex items-center mt-4 px-4 py-2 bg-pink-500 text-white rounded-md"
+        >
+          <Plus className="w-4 h-4 mr-2" />
+          Crear plan
+        </button>
+      </div>
+
       {error && <p className="text-red-500">{error}</p>}
       <div className="grid md:grid-cols-3 gap-6">
         {plans.map((plan) => (
@@ -290,29 +315,6 @@ export default function PricingManager() {
             )}
           </div>
         ))}
-      </div>
-      <div className="mt-8">
-        <h3 className="text-xl font-semibold">Crear un nuevo plan</h3>
-        <input
-          type="text"
-          placeholder="Nombre del plan"
-          value={newPlan.name}
-          onChange={(e) => setNewPlan({ ...newPlan, name: e.target.value })}
-          className="w-full p-2 mt-2 border rounded"
-        />
-        <input
-          type="text"
-          placeholder="Precio"
-          value={newPlan.price}
-          onChange={(e) => setNewPlan({ ...newPlan, price: e.target.value })}
-          className="w-full p-2 mt-2 border rounded"
-        />
-        <button
-          onClick={handleCreatePlan}
-          className="mt-4 px-4 py-2 bg-pink-500 text-white rounded-md"
-        >
-          Crear plan
-        </button>
       </div>
     </div>
   );

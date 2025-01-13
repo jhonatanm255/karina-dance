@@ -43,9 +43,9 @@ export default function PriceCard({
       </ul>
       <button
         onClick={() => console.log("Inscripción:", name)}
-        className="w-full bg-pink-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-pink-600 transition-colors"
+        className="w-full border border-pink-500 bg-pink-50 text-pink-500 px-6 py-1 rounded-lg italic"
       >
-        Inscríbete Ahora
+        Inscripción directa en la Academia
       </button>
     </div>
   );
