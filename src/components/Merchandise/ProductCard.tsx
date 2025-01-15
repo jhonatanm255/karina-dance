@@ -15,7 +15,8 @@ export default function ProductCard({
   description,
 }: ProductCardProps) {
   useEffect(() => {
-    ScrollReveal().reveal(".product-card", {
+    const sr = ScrollReveal();
+    sr.reveal(".product-card", {
       delay: 300,
       distance: "50px",
       origin: "bottom",
@@ -23,6 +24,10 @@ export default function ProductCard({
       duration: 800,
       easing: "ease-in-out",
     });
+
+    return () => {
+      sr.destroy(); // Cleanup to avoid memory leaks
+    };
   }, []);
 
   return (

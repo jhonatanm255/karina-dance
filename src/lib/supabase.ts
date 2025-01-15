@@ -6,3 +6,6 @@ const supabaseKey =
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default supabase;
+
+
+// PENDIENTE POR REALIZAR ENCRIPTACION DE INFORMACION CON .ENV

@@ -283,7 +283,7 @@ export default function PricingManager() {
                     </button>
                     <button
                       onClick={() => handleDelete(plan.id)}
-                      className="text-red-500"
+                      className="text-red-500 hover:text-red-700"
                     >
                       <Trash2 className="w-5 h-5" />
                     </button>
