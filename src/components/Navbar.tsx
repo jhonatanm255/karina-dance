@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Star } from "lucide-react";
 import ScrollReveal from "scrollreveal";
+import logo from "../src/assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             {/* <Star className="h-8 w-8 text-pink-300" /> */}
-            <img className="h-9 w-14" src="../src/assets/logo.png" alt="logo" />
+            <img className="h-9 w-14" src={logo} alt="logo" />
             <span className="ml-2 text-xl font-semibold text-gray-900">
               Karina Dance Academy
             </span>
