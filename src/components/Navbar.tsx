@@ -9,7 +9,7 @@ export default function Navbar() {
     const sr = ScrollReveal();
 
     sr.reveal(".navbar", {
-      delay: 5000,
+      delay: 4700,
       duration: 1000, // Duración del efecto (1s)
       distance: "50px", // Distancia del desplazamiento
       origin: "top", // Desde arriba
