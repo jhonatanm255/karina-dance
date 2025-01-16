@@ -26,10 +26,10 @@ function App() {
           path="/"
           element={
             <>
-              <Intro />
               <div className="min-h-screen">
                 <Suspense fallback={<div className="min-h-screen" />}>
                   <WhatsappButton phoneNumber="56926467068" />
+                  <Intro />
                   <Navbar />
                   <Hero />
                   <About />

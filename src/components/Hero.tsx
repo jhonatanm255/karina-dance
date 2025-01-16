@@ -9,7 +9,7 @@ export default function Hero() {
 
     // Configuración para los elementos del Hero
     sr.reveal("#hero-image", {
-      delay: 2000, // Retraso de 2 segundos
+      delay: 5000, // Retraso de 2 segundos
       duration: 2000,
       distance: "50px",
       origin: "bottom",
@@ -17,7 +17,7 @@ export default function Hero() {
     });
 
     sr.reveal("#hero-title", {
-      delay: 2500, // Aparece después de la imagen
+      delay: 5300, // Aparece después de la imagen
       duration: 2000,
       distance: "50px",
       origin: "bottom",
@@ -25,7 +25,7 @@ export default function Hero() {
     });
 
     sr.reveal("#hero-text", {
-      delay: 2800,
+      delay: 5500,
       duration: 2000,
       distance: "50px",
       origin: "bottom",
@@ -33,7 +33,7 @@ export default function Hero() {
     });
 
     sr.reveal("#hero-buttons", {
-      delay: 3000,
+      delay: 5800,
       duration: 2000,
       distance: "50px",
       origin: "bottom",

@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Star } from "lucide-react";
+import ScrollReveal from "scrollreveal";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".navbar", {
+      delay: 5000,
+      duration: 1000, // Duración del efecto (1s)
+      distance: "50px", // Distancia del desplazamiento
+      origin: "top", // Desde arriba
+      opacity: 0, // Comienza desde opacidad 0
+      reset: false, // La animación no se repite
+    });
+  }, []);
 
   return (
     <nav className="navbar fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
