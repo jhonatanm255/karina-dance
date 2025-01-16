@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Star } from "lucide-react";
 import ScrollReveal from "scrollreveal";
-import logo from "../src/assets/logo.png";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
