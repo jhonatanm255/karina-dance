@@ -10,11 +10,10 @@ export default function Pricing() {
   useEffect(() => {
     // Configuración de ScrollReveal
     ScrollReveal().reveal(".pricing-title", {
-      delay: 300,
       distance: "50px",
       origin: "bottom",
       opacity: 0,
-      duration: 800,
+      duration: 1200,
       easing: "ease-in-out",
     });
 

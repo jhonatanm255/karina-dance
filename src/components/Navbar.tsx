@@ -23,13 +23,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Star className="h-8 w-8 text-pink-300" />
+            {/* <Star className="h-8 w-8 text-pink-300" /> */}
+            <img className="h-9 w-14" src="../src/assets/logo.png" alt="logo" />
             <span className="ml-2 text-xl font-semibold text-gray-900">
               Karina Dance Academy
             </span>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden xl:block">
             <div className="ml-10 flex items-baseline">
               <a
                 href="#home"
@@ -94,7 +95,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="md:hidden">
+          <div className="xl:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-pink-300"
@@ -114,7 +115,7 @@ export default function Navbar() {
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-2 pointer-events-none"
-        } md:hidden fixed top-16 left-0 w-full h-screen bg-white backdrop-blur-sm shadow-lg transform transition-all duration-300 ease-in-out`}
+        } xl:hidden fixed top-16 left-0 w-full h-screen bg-white backdrop-blur-sm shadow-lg transform transition-all duration-300 ease-in-out`}
       >
         <div className="px-4 py-3 space-y-3 text-center">
           <a
@@ -192,3 +193,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

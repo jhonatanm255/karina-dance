@@ -9,7 +9,7 @@ export default function Instructor() {
 
     // Configuración de efectos más sutiles
     sr.reveal("#instructor-section", {
-      duration: 2500,
+      duration: 1500,
       distance: "40px",
       origin: "bottom",
       opacity: 0,
