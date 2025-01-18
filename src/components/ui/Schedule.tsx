@@ -3,19 +3,19 @@ import { Clock9, X } from "lucide-react";
 export function Schedule() {
   return (
     <div>
-      <h3 className="text-xl text-center lg:text-start font-semibold mb-4">
+      <h3 className="text-xl text-center md:text-start font-semibold mb-4">
         Horario
       </h3>
       <ul className="space-y-2 text-gray-400">
-        <li className="flex items-center justify-center lg:justify-start gap-2">
+        <li className="flex items-center justify-center md:justify-start gap-2">
           <Clock9 className="w-5 h-5 text-pink-300" />
           Lunes - Viernes: 9:00 - 21:00
         </li>
-        <li className="flex items-center justify-center lg:justify-start gap-2">
+        <li className="flex items-center justify-center md:justify-start gap-2">
           <Clock9 className="w-5 h-5 text-pink-300" />
           Sábado: 9:00 - 14:00
         </li>
-        <li className="flex items-center justify-center lg:justify-start gap-2">
+        <li className="flex items-center justify-center md:justify-start gap-2">
           <X className="w-5 h-5 text-pink-300" />
           Domingo: Cerrado
         </li>

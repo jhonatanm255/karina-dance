@@ -78,7 +78,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Swiper
             modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
             effect="coverflow"
@@ -119,3 +119,8 @@ export default function Gallery() {
     </section>
   );
 }
+
+
+
+
+

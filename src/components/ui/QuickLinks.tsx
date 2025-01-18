@@ -8,7 +8,7 @@ export function QuickLinks() {
         <li>
           <a
             href="#about"
-            className="flex gap-2 items-center justify-center lg:justify-start text-gray-400 hover:text-pink-300 transition-colors"
+            className="flex gap-2 items-center justify-center md:justify-start text-gray-400 hover:text-pink-300 transition-colors"
           >
             <Users className="w-5 h-5 text-pink-300" />
             Sobre Nosotros
@@ -17,7 +17,7 @@ export function QuickLinks() {
         <li>
           <a
             href="#events"
-            className="flex gap-2 items-center justify-center lg:justify-start text-gray-400 hover:text-pink-300 transition-colors"
+            className="flex gap-2 items-center justify-center md:justify-start text-gray-400 hover:text-pink-300 transition-colors"
           >
             <CalendarSearch className="w-5 h-5 text-pink-300" />
             Eventos
@@ -26,7 +26,7 @@ export function QuickLinks() {
         <li>
           <a
             href="#pricing"
-            className="flex gap-2 items-center justify-center lg:justify-start text-gray-400 hover:text-pink-300 transition-colors"
+            className="flex gap-2 items-center justify-center md:justify-start text-gray-400 hover:text-pink-300 transition-colors"
           >
             <NotepadText className="w-5 h-5 text-pink-300" />
             Planes
@@ -35,7 +35,7 @@ export function QuickLinks() {
         <li>
           <a
             href="#merchandise"
-            className="flex gap-2 items-center justify-center lg:justify-start text-gray-400 hover:text-pink-300 transition-colors"
+            className="flex gap-2 items-center justify-center md:justify-start text-gray-400 hover:text-pink-300 transition-colors"
           >
             <Store className="w-5 h-5 text-pink-300" />
             Tienda
@@ -45,3 +45,5 @@ export function QuickLinks() {
     </div>
   );
 }
+
+
