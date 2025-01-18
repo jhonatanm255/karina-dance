@@ -64,6 +64,14 @@ export default function Gallery() {
       origin: "bottom",
       delay: 400,
     });
+
+    sr.reveal(".gallery-swiper", {
+      duration: 1000,
+      opacity: 0,
+      distance: "20px",
+      origin: "bottom",
+      delay: 600,
+    });
   }, []);
 
   return (
