@@ -1,20 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  collection, 
-  getDocs, 
-  addDoc, 
-  updateDoc, 
-  deleteDoc, 
-  doc 
-} from 'firebase/firestore';
-import { db } from '../../lib/firebase';
-import { Calendar, Clock, MapPin, Plus, Edit2, Trash2, Save, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
+import { db } from "../../lib/firebase";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Plus,
+  Edit2,
+  Trash2,
+  Save,
+  X,
+} from "lucide-react";
 
 interface Event {
   id: string;
   title: string;
   date: string;
   time: string;
+  duration: number; // Nueva propiedad
   location: string;
   description: string;
 }
@@ -23,14 +33,15 @@ export default function EventsManager() {
   const [events, setEvents] = useState<Event[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [isAdding, setIsAdding] = useState(false);
-  const [newEvent, setNewEvent] = useState<Omit<Event, 'id'>>({
-    title: '',
-    date: '',
-    time: '',
-    location: '',
-    description: ''
+  const [newEvent, setNewEvent] = useState<Omit<Event, "id">>({
+    title: "",
+    date: "",
+    time: "",
+    duration: 1, // Duración predeterminada en horas
+    location: "",
+    description: "",
   });
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     loadEvents();
@@ -38,61 +49,82 @@ export default function EventsManager() {
 
   const loadEvents = async () => {
     try {
-      const querySnapshot = await getDocs(collection(db, 'events'));
-      const loadedEvents = querySnapshot.docs.map(doc => ({
+      const querySnapshot = await getDocs(collection(db, "events"));
+      const loadedEvents = querySnapshot.docs.map((doc) => ({
         id: doc.id,
-        ...doc.data()
+        ...doc.data(),
       })) as Event[];
       setEvents(loadedEvents);
     } catch (err) {
-      setError('Error al cargar los eventos');
+      setError("Error al cargar los eventos");
       console.error(err);
     }
   };
 
   const handleAdd = async () => {
     try {
-      await addDoc(collection(db, 'events'), newEvent);
+      await addDoc(collection(db, "events"), newEvent);
       setIsAdding(false);
       setNewEvent({
-        title: '',
-        date: '',
-        time: '',
-        location: '',
-        description: ''
+        title: "",
+        date: "",
+        time: "",
+        duration: 1,
+        location: "",
+        description: "",
       });
       await loadEvents();
     } catch (err) {
-      setError('Error al agregar el evento');
+      setError("Error al agregar el evento");
       console.error(err);
     }
   };
 
   const handleUpdate = async (event: Event) => {
     try {
-      await updateDoc(doc(db, 'events', event.id), event);
+      await updateDoc(doc(db, "events", event.id), event);
       setEditingId(null);
       await loadEvents();
     } catch (err) {
-      setError('Error al actualizar el evento');
+      setError("Error al actualizar el evento");
       console.error(err);
     }
   };
 
   const handleDelete = async (eventId: string) => {
     try {
-      await deleteDoc(doc(db, 'events', eventId));
+      await deleteDoc(doc(db, "events", eventId));
       await loadEvents();
     } catch (err) {
-      setError('Error al eliminar el evento');
+      setError("Error al eliminar el evento");
       console.error(err);
     }
   };
 
+  const filterExpiredEvents = async () => {
+    const now = new Date();
+    const expiredEvents = events.filter((event) => {
+      const eventStart = new Date(`${event.date}T${event.time}`);
+      const eventEnd = new Date(
+        eventStart.getTime() + event.duration * 60 * 60 * 1000
+      );
+      return eventEnd < now;
+    });
+
+    for (const expiredEvent of expiredEvents) {
+      await handleDelete(expiredEvent.id);
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(filterExpiredEvents, 60000); // Revisión cada minuto
+    return () => clearInterval(interval);
+  }, [events]);
+
   return (
     <div className="space-y-6">
       {error && <p className="text-red-500">{error}</p>}
-      
+
       <button
         onClick={() => setIsAdding(true)}
         className="flex items-center px-4 py-2 bg-pink-500 text-white rounded-md"
@@ -114,20 +146,36 @@ export default function EventsManager() {
               type="text"
               placeholder="Título del evento"
               value={newEvent.title}
-              onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
+              onChange={(e) =>
+                setNewEvent({ ...newEvent, title: e.target.value })
+              }
               className="w-full p-2 border rounded"
             />
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               <input
                 type="date"
                 value={newEvent.date}
-                onChange={(e) => setNewEvent({ ...newEvent, date: e.target.value })}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, date: e.target.value })
+                }
                 className="w-full p-2 border rounded"
               />
               <input
                 type="time"
                 value={newEvent.time}
-                onChange={(e) => setNewEvent({ ...newEvent, time: e.target.value })}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, time: e.target.value })
+                }
+                className="w-full p-2 border rounded"
+              />
+              <input
+                type="number"
+                min="1"
+                value={newEvent.duration}
+                onChange={(e) =>
+                  setNewEvent({ ...newEvent, duration: Number(e.target.value) })
+                }
+                placeholder="Duración (horas)"
                 className="w-full p-2 border rounded"
               />
             </div>
@@ -135,13 +183,17 @@ export default function EventsManager() {
               type="text"
               placeholder="Ubicación"
               value={newEvent.location}
-              onChange={(e) => setNewEvent({ ...newEvent, location: e.target.value })}
+              onChange={(e) =>
+                setNewEvent({ ...newEvent, location: e.target.value })
+              }
               className="w-full p-2 border rounded"
             />
             <textarea
               placeholder="Descripción"
               value={newEvent.description}
-              onChange={(e) => setNewEvent({ ...newEvent, description: e.target.value })}
+              onChange={(e) =>
+                setNewEvent({ ...newEvent, description: e.target.value })
+              }
               className="w-full p-2 border rounded"
               rows={3}
             />
@@ -163,42 +215,87 @@ export default function EventsManager() {
                 <input
                   type="text"
                   value={event.title}
-                  onChange={(e) => setEvents(events.map(ev => 
-                    ev.id === event.id ? { ...ev, title: e.target.value } : ev
-                  ))}
+                  onChange={(e) =>
+                    setEvents(
+                      events.map((ev) =>
+                        ev.id === event.id
+                          ? { ...ev, title: e.target.value }
+                          : ev
+                      )
+                    )
+                  }
                   className="w-full p-2 border rounded"
                 />
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-3 gap-4">
                   <input
                     type="date"
                     value={event.date}
-                    onChange={(e) => setEvents(events.map(ev => 
-                      ev.id === event.id ? { ...ev, date: e.target.value } : ev
-                    ))}
+                    onChange={(e) =>
+                      setEvents(
+                        events.map((ev) =>
+                          ev.id === event.id
+                            ? { ...ev, date: e.target.value }
+                            : ev
+                        )
+                      )
+                    }
                     className="w-full p-2 border rounded"
                   />
                   <input
                     type="time"
                     value={event.time}
-                    onChange={(e) => setEvents(events.map(ev => 
-                      ev.id === event.id ? { ...ev, time: e.target.value } : ev
-                    ))}
+                    onChange={(e) =>
+                      setEvents(
+                        events.map((ev) =>
+                          ev.id === event.id
+                            ? { ...ev, time: e.target.value }
+                            : ev
+                        )
+                      )
+                    }
+                    className="w-full p-2 border rounded"
+                  />
+                  <input
+                    type="number"
+                    min="1"
+                    value={event.duration}
+                    onChange={(e) =>
+                      setEvents(
+                        events.map((ev) =>
+                          ev.id === event.id
+                            ? { ...ev, duration: Number(e.target.value) }
+                            : ev
+                        )
+                      )
+                    }
                     className="w-full p-2 border rounded"
                   />
                 </div>
                 <input
                   type="text"
                   value={event.location}
-                  onChange={(e) => setEvents(events.map(ev => 
-                    ev.id === event.id ? { ...ev, location: e.target.value } : ev
-                  ))}
+                  onChange={(e) =>
+                    setEvents(
+                      events.map((ev) =>
+                        ev.id === event.id
+                          ? { ...ev, location: e.target.value }
+                          : ev
+                      )
+                    )
+                  }
                   className="w-full p-2 border rounded"
                 />
                 <textarea
                   value={event.description}
-                  onChange={(e) => setEvents(events.map(ev => 
-                    ev.id === event.id ? { ...ev, description: e.target.value } : ev
-                  ))}
+                  onChange={(e) =>
+                    setEvents(
+                      events.map((ev) =>
+                        ev.id === event.id
+                          ? { ...ev, description: e.target.value }
+                          : ev
+                      )
+                    )
+                  }
                   className="w-full p-2 border rounded"
                   rows={3}
                 />
@@ -235,7 +332,7 @@ export default function EventsManager() {
                   </div>
                   <div className="flex items-center">
                     <Clock className="w-4 h-4 mr-2" />
-                    {event.time}
+                    {event.time} ({event.duration} horas)
                   </div>
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 mr-2" />
