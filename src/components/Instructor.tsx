@@ -55,9 +55,23 @@ export default function Instructor() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Conoce a Nuestra Directora
             </h2>
-            <h3 className="text-xl text-pink-400 mb-4">Lic. Karina Gutiérrez García</h3>
+            <h3 className="text-xl text-pink-400 mb-4">
+              Lic. Karina Gutiérrez García
+            </h3>
             <p className="text-gray-600 mb-6">
-              Con más de 30 años de experiencia impartiendo clases de danza Jazz, Danza Árabe y actualmente Acrodance y Danza Aérea. Promotora cultural de danza contemporánea. Ganadora de diversos premios en concursos de baile a nivel nacional como intercolegial de televisa, carnaval de Vhsa. Javo producciones. <br />Organización de festivales de danza. Montaje escénicos para colegios. Organización de cursos de capacitación en materia de danza. Montaje de Vals de XV años, coreografías para bodas, entre otros. Logistica en ferias y eventos particulares. Organizacion de concursos de baile y rondas infantiles. Capacitadora en formacion dancística.
+              Aquí está el texto con los signos de puntuación corregidos y
+              organizados para mayor claridad: Con más de 30 años de experiencia
+              impartiendo clases de Danza Jazz, Danza Árabe y, actualmente,
+              Acrodance y Danza Aérea. Promotora cultural de danza contemporánea
+              y ganadora de diversos premios en concursos de baile a nivel
+              nacional, como el Intercolegial de Televisa, el Carnaval de
+              Villahermosa y Javo Producciones. Experiencia en la organización
+              de festivales de danza, montaje escénico para colegios y cursos de
+              capacitación en materia de danza. Especialista en el montaje de
+              vals de XV años, coreografías para bodas, entre otros. Amplia
+              trayectoria en logística de ferias y eventos particulares, así
+              como en la organización de concursos de baile y rondas infantiles.
+              Capacitadora en formación dancística.
             </p>
 
             <div className="space-y-4">
@@ -65,10 +79,10 @@ export default function Instructor() {
                 <BookOpen className="w-6 h-6 text-pink-300 mt-1" />
                 <div>
                   <h4 className="font-semibold">Formación Internacional</h4>
+                  <p className="text-gray-600">Arabian Dance School</p>
                   <p className="text-gray-600">
-                    Arabian Dance School
+                    Maestra certificada en Danzas árabes
                   </p>
-                  <p className="text-gray-600">Maestra certificada en Danzas árabes</p>
                 </div>
               </div>
 
