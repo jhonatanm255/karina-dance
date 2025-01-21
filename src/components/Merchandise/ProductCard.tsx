@@ -3,14 +3,14 @@ import ScrollReveal from "scrollreveal";
 
 interface ProductCardProps {
   name: string;
-  price: string;
+  // price: string;
   image: string;
   description: string;
 }
 
 export default function ProductCard({
   name,
-  price,
+  // price,
   image,
   description,
 }: ProductCardProps) {
@@ -35,9 +35,9 @@ export default function ProductCard({
       <div className="relative aspect-square">
         <img src={image} alt={name} className="w-full h-full object-cover" />
         <div className="absolute top-2 right-2">
-          <span className="bg-pink-400 text-white px-3 py-1 rounded-full">
+          {/* <span className="bg-pink-400 text-white px-3 py-1 rounded-full">
             {price}
-          </span>
+          </span> */}
         </div>
       </div>
       <div className="p-6">

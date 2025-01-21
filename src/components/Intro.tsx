@@ -22,16 +22,13 @@ export default function Intro() {
         playsInline
         className="w-full h-full object-cover opacity-50"
       >
-        <source
-          src={Ballerina}
-          type="video/mp4"
-        />
+        <source src={Ballerina} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-white mt-4">
-            Karina Dance Academy
+            Academia de Danza Karina Gym
           </h1>
         </div>
       </div>

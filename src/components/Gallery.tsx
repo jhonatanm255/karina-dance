@@ -107,7 +107,7 @@ export default function Gallery() {
           >
             {images.map((image, index) => (
               <SwiperSlide key={index} className="w-full md:w-3/4 lg:w-2/3">
-                <div className="relative overflow-hidden rounded-lg group aspect-w-16 aspect-h-9">
+                <div className="relative overflow-hidden rounded-lg group aspect-w-16 aspect-h-9 scale-90">
                   <img
                     src={image.url}
                     alt={`Imagen ${index + 1}`}

@@ -43,9 +43,23 @@ export default function About() {
           </h2>
           <p
             id="about-description"
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-lg text-gray-600 max-w-6xl mx-auto"
           >
-            Más de 10 años formando bailarinas y creando momentos inolvidables
+            Nace en el año 2000 como una necesidad de crear espacios
+            recreativos, cultural y formativo para niños, jóvenes y adultos.
+            Impulsado por la Prof. Karina Gutiérrez García, Bailarina de danza
+            contemporánea y danzas orientales.​ ​ Desde su inicio empezó con la
+            participación en diferentes eventos destacando tanto a nivel estatal
+            como regional en donde obtuvo destacados resultados. Intercolegial
+            de baile televisa Región Sureste, Carnaval de Villahermosa,
+            Interjuvenil de baile Tabasco, por mencionar algunos.​ ​ En la
+            actualidad se imparten las disciplinas de danza jazz, acrodance,
+            danza árabe, danza aérea y sensual dance. Cotando con un cuerpo de
+            profesores especializados en sus aéreas.​ ​ En la Academia de danza
+            Karina Gym ofrecemos clases a partir de 3 años, y con un proyecto
+            actual de danza sensual para mayores de edad en donde se aprende a
+            ejecutar diversas técnicas.​ ​ Ven y sé parte de nuestra comunidad
+            Karina Gym.​ <br /><br />INSCRIPCIONES ABIERTAS
           </p>
         </div>
 

@@ -5,7 +5,7 @@ export function SocialLinks() {
     <div className="flex space-x-4">
       <a
         href="#"
-        className="text-gray-400 hover:text-pink-300 transition-colors"
+        className=" text-gray-400 hover:text-pink-300 transition-colors"
       >
         <Facebook className="w-6 h-6" />
       </a>

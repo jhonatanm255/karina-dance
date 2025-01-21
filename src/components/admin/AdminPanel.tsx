@@ -3,7 +3,7 @@ import { auth } from "../../lib/firebase";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import GalleryManager from "./GalleryManager";
 import TestimonialsManager from "./TestimonialsManager";
-import PricingManager from "./PricingManager";
+// import PricingManager from "./PricingManager";
 import ShopManager from "./ShopManager";
 import EventsManager from "./EventsManager";
 import { useNavigate } from "react-router-dom";
@@ -43,7 +43,7 @@ export default function AdminPanel() {
           <TabsList>
             <TabsTrigger value="gallery">Galería</TabsTrigger>
             <TabsTrigger value="testimonials">Testimonios</TabsTrigger>
-            <TabsTrigger value="pricing">Planes</TabsTrigger>
+            {/* <TabsTrigger value="pricing">Planes</TabsTrigger> */}
             <TabsTrigger value="shop">Tienda</TabsTrigger>
             <TabsTrigger value="events">Eventos</TabsTrigger>
           </TabsList>
@@ -54,9 +54,9 @@ export default function AdminPanel() {
           <TabsContent value="testimonials">
             <TestimonialsManager />
           </TabsContent>
-          <TabsContent value="pricing">
+          {/* <TabsContent value="pricing">
             <PricingManager />
-          </TabsContent>
+          </TabsContent> */}
           <TabsContent value="shop">
             <ShopManager />
           </TabsContent>

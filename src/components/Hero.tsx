@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { ArrowRight } from "lucide-react";
-import img2 from "../assets/gallery-img/img-2.jpg";
+import img2 from "../assets/gallery-img/hero.jpg";
 
 export default function Hero() {
   useEffect(() => {
@@ -82,3 +82,6 @@ export default function Hero() {
     </section>
   );
 }
+
+
+

@@ -127,9 +127,11 @@ export default function Events() {
               </div>
             ))
           ) : (
-            <p className="text-center text-pink-500">
-              No hay eventos para mostrar
-            </p>
+            <div className="col-span-3 flex justify-center items-center">
+              <p className="text-center text-pink-500">
+                No hay eventos para mostrar
+              </p>
+            </div>
           )}
         </div>
       </div>

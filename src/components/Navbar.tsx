@@ -26,8 +26,8 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* <Star className="h-8 w-8 text-pink-300" /> */}
             <img className="h-9 w-14" src={logo} alt="logo" />
-            <span className="ml-2 text-xl font-semibold text-gray-900">
-              Karina Dance Academy
+            <span className="ml-2 text-lg md:text-xl font-semibold text-gray-900">
+              Academia de Danza Karina Gym
             </span>
           </div>
 
@@ -75,12 +75,12 @@ export default function Navbar() {
               >
                 Testimonios
               </a>
-              <a
+              {/* <a
                 href="#pricing"
                 className="text-gray-900 hover:text-pink-700 hover:bg-[#ff007717] px-3 py-2 rounded-full text-sm font-medium transition-colors"
               >
                 Planes
-              </a>
+              </a> */}
               <a
                 href="#merchandise"
                 className="text-gray-900 hover:text-pink-700 hover:bg-[#ff007717] px-3 py-2 rounded-full text-sm font-medium transition-colors"
@@ -168,13 +168,13 @@ export default function Navbar() {
           >
             Testimonios
           </a>
-          <a
+          {/* <a
             href="#pricing"
             onClick={() => setIsOpen(false)}
             className="block text-gray-900 hover:text-pink-300 px-3 py-2 rounded-md text-base font-medium"
           >
             Planes
-          </a>
+          </a> */}
           <a
             href="#merchandise"
             onClick={() => setIsOpen(false)}

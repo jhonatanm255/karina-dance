@@ -54,7 +54,7 @@ export default function Merchandise() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
-            Tienda Karina Dance
+            Tienda Karina Gym
           </h2>
           <p className="text-lg text-gray-600">
             Equipo y accesorios de alta calidad para bailarines
@@ -69,7 +69,7 @@ export default function Merchandise() {
               key={product.id}
               id={product.id}
               name={product.name}
-              price={product.price}
+              // price={product.price}
               description={product.description}
               image={
                 isValidUrl(product.image)

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { Award, BookOpen, Heart } from "lucide-react";
-import profesora from "../assets/gallery-img/profesora.jpg";
+import profesora from "../assets/gallery-img/instructora.jpeg";
 
 export default function Instructor() {
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Instructor() {
               <div className="flex items-center space-x-2">
                 <Award className="w-6 h-6 text-pink-300" />
                 <span className="text-sm font-medium">
-                  15+ años de experiencia
+                  30+ años de experiencia
                 </span>
               </div>
             </div>
@@ -55,13 +55,9 @@ export default function Instructor() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Conoce a Nuestra Directora
             </h2>
-            <h3 className="text-xl text-pink-400 mb-4">Karina Fernández</h3>
+            <h3 className="text-xl text-pink-400 mb-4">Lic. Karina Gutiérrez García</h3>
             <p className="text-gray-600 mb-6">
-              Con más de 15 años de experiencia en danza clásica y
-              contemporánea, María ha dedicado su vida a formar nuevas
-              generaciones de bailarinas. Graduada del Conservatorio Nacional de
-              Danza y con estudios en las mejores academias de Nueva York y
-              Londres.
+              Con más de 30 años de experiencia impartiendo clases de danza Jazz, Danza Árabe y actualmente Acrodance y Danza Aérea. Promotora cultural de danza contemporánea. Ganadora de diversos premios en concursos de baile a nivel nacional como intercolegial de televisa, carnaval de Vhsa. Javo producciones. <br />Organización de festivales de danza. Montaje escénicos para colegios. Organización de cursos de capacitación en materia de danza. Montaje de Vals de XV años, coreografías para bodas, entre otros. Logistica en ferias y eventos particulares. Organizacion de concursos de baile y rondas infantiles. Capacitadora en formacion dancística.
             </p>
 
             <div className="space-y-4">
@@ -70,9 +66,9 @@ export default function Instructor() {
                 <div>
                   <h4 className="font-semibold">Formación Internacional</h4>
                   <p className="text-gray-600">
-                    Royal Academy of Dance, Londres
+                    Arabian Dance School
                   </p>
-                  <p className="text-gray-600">Juilliard School, Nueva York</p>
+                  <p className="text-gray-600">Maestra certificada en Danzas árabes</p>
                 </div>
               </div>
 
@@ -88,7 +84,7 @@ export default function Instructor() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <Heart className="w-16 h-6 text-pink-300 mt-1" />
+                <Heart className="w-6 h-6 text-pink-300 mt-1 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold">Filosofía de Enseñanza</h4>
                   <p className="text-gray-600">
