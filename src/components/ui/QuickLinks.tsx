@@ -1,4 +1,4 @@
-import { Users, Store, CalendarSearch, NotepadText } from "lucide-react";
+import { Users, Store, Shapes, User } from "lucide-react";
 
 export function QuickLinks() {
   return (
@@ -16,20 +16,20 @@ export function QuickLinks() {
         </li>
         <li>
           <a
-            href="#events"
+            href="#class"
             className="flex gap-2 items-center justify-center md:justify-start text-gray-400 hover:text-pink-300 transition-colors"
           >
-            <CalendarSearch className="w-5 h-5 text-pink-300" />
-            Eventos
+            <Shapes className="w-5 h-5 text-pink-300" />
+            Clases
           </a>
         </li>
         <li>
           <a
-            href="#pricing"
+            href="#instructor"
             className="flex gap-2 items-center justify-center md:justify-start text-gray-400 hover:text-pink-300 transition-colors"
           >
-            <NotepadText className="w-5 h-5 text-pink-300" />
-            Planes
+            <User className="w-5 h-5 text-pink-300" />
+            Instructora
           </a>
         </li>
         <li>

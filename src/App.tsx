@@ -26,6 +26,7 @@ const Merchandise = lazy(() => import("./components/Merchandise"));
 const Footer = lazy(() => import("./components/Footer"));
 const WhatsappButton = lazy(() => import("./components/WhatsappBtn"));
 const AdminPanel = lazy(() => import("./components/admin/AdminPanel"));
+const Class = lazy(() => import("./components/Class"));
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
                   <Navbar />
                   <Hero />
                   <About />
+                  <Class />
                   <Instructor />
                   <Gallery />
                   <Achievements />

@@ -46,8 +46,8 @@ export default function About() {
             className="text-lg text-gray-600 max-w-6xl mx-auto"
           >
             Nace en el año 2000 como una necesidad de crear espacios
-            recreativos, cultural y formativo para niños, jóvenes y adultos.
-            Impulsado por la Prof. Karina Gutiérrez García, Bailarina de danza
+            recreativos, culturales y formativos para niños, jóvenes y adultos.
+            Impulsado por la Prof. Karina Gutiérrez García, bailarina de danza
             contemporánea y danzas orientales.​ ​ Desde su inicio empezó con la
             participación en diferentes eventos destacando tanto a nivel estatal
             como regional en donde obtuvo destacados resultados. Intercolegial
@@ -59,7 +59,14 @@ export default function About() {
             Karina Gym ofrecemos clases a partir de 3 años, y con un proyecto
             actual de danza sensual para mayores de edad en donde se aprende a
             ejecutar diversas técnicas.​ ​ Ven y sé parte de nuestra comunidad
-            Karina Gym.​ <br /><br />INSCRIPCIONES ABIERTAS
+            Karina Gym.​ <br />
+            <br />
+            <div className="relative inline-block px-6 py-3 text-white text-md font-semibold bg-pink-300 rounded-full shadow-lg transform hover:scale-105 transition-transform">
+          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-500 to-purple-500 opacity-75 rounded-full"></span>
+          <span className="relative z-10 uppercase">
+            Inscripciones Abiertas
+          </span>
+        </div>
           </p>
         </div>
 

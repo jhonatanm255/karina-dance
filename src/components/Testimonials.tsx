@@ -105,7 +105,7 @@ export default function Testimonials() {
 
         {testimonials.length === 0 ? (
           <div className="text-center">
-            <p className="text-sm text-pink-400">
+            <p className="text-pink-400">
               No hay testimonios publicados por el momento. Sé el primero en
               dejar uno.
             </p>

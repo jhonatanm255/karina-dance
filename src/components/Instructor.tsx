@@ -59,8 +59,7 @@ export default function Instructor() {
               Lic. Karina Gutiérrez García
             </h3>
             <p className="text-gray-600 mb-6">
-              Aquí está el texto con los signos de puntuación corregidos y
-              organizados para mayor claridad: Con más de 30 años de experiencia
+              Con más de 30 años de experiencia
               impartiendo clases de Danza Jazz, Danza Árabe y, actualmente,
               Acrodance y Danza Aérea. Promotora cultural de danza contemporánea
               y ganadora de diversos premios en concursos de baile a nivel
@@ -81,7 +80,7 @@ export default function Instructor() {
                   <h4 className="font-semibold">Formación Internacional</h4>
                   <p className="text-gray-600">Arabian Dance School</p>
                   <p className="text-gray-600">
-                    Maestra certificada en Danzas árabes
+                    Maestra certificada en Danzas Árabes
                   </p>
                 </div>
               </div>
