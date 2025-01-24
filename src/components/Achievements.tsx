@@ -6,26 +6,26 @@ export default function Achievements() {
   const achievements = [
     {
       icon: <Trophy className="w-12 h-12 text-pink-300" />,
-      title: "Premio Nacional de Danza",
-      year: "2023",
-      description: "Mejor Academia de Danza del Año",
+      title: "Premio Interjuvenil de Baile",
+      year: "2009",
+      description: "Participacion como coreógrafos en el evento",	
     },
     {
       icon: <Award className="w-12 h-12 text-pink-300" />,
-      title: "Reconocimiento Internacional",
-      year: "2022",
-      description: "Festival Internacional de Ballet - París",
+      title: "Carnaval de Villahermosa",
+      year: "2004",
+      description: "Teercer lugar de comparsa infantil de fantasía",
     },
     {
       icon: <Medal className="w-12 h-12 text-pink-300" />,
-      title: "Excelencia Educativa",
-      year: "2023",
-      description: "Certificación Royal Academy of Dance",
+      title: "Intercolegial Kids",
+      year: "2003",
+      description: "Certificación por su valiosa participación en el evento",
     },
     {
       icon: <Star className="w-12 h-12 text-pink-300" />,
       title: "Mejores Egresadas",
-      year: "2021-2023",
+      year: "2001-2025",
       description: "90% de nuestras alumnas en compañías profesionales",
     },
   ];
