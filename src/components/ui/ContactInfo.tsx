@@ -8,7 +8,8 @@ export function ContactInfo() {
         <li className="flex items-start justify-center md:justify-start space-x-2">
           <MapPin className="w-5 h-5 text-pink-300 flex-shrink-0" />
           <span className="text-gray-400">
-            Flor de Verónica 102, Col. Las Gaviotas <br />(entrada fracc. Rinconada <br />
+            Flor de Verónica 102, Col. Las Gaviotas <br />
+            (entrada fracc. Rinconada <br />
             casi esq. con malecón)
           </span>
         </li>
@@ -18,7 +19,7 @@ export function ContactInfo() {
         </li>
         <li className="flex items-center justify-center md:justify-start space-x-2">
           <Mail className="w-5 h-5 text-pink-300 flex-shrink-0" />
-          <span className="text-gray-400">info@dreamdance.com</span>
+          <span className="text-gray-400">danzakarinagym@hotmail.com</span>
         </li>
       </ul>
     </div>

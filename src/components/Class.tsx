@@ -1,28 +1,28 @@
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
-// import img1 from "../assets/clase1.jpeg";
+import img1 from "../assets/clase1.jpeg";
 import img2 from "../assets/clase2.jpeg";
 import img3 from "../assets/clase3.jpeg";
-// import img4 from "../assets/clase4.jpeg";
+import img4 from "../assets/clase4.jpeg";
 
 export default function Class() {
   const achievements = [
-    // {
-    //   image: img1,
-    //   description: "Mejor Academia de Danza del Año",
-    // },
     {
       image: img2,
-      description: "Lunes - Miércoles",
+      description: "Lunes",
+    },
+    {
+      image: img4,
+      description: "Martes",
+    },
+    {
+      image: img1,
+      description: "Miercoles",
     },
     {
       image: img3,
-      description: "Martes - Jueves",
+      description: "Jueves",
     },
-    // {
-    //   image: img4,
-    //   description: "90% de nuestras alumnas en compañías profesionales",
-    // },
   ];
 
   useEffect(() => {

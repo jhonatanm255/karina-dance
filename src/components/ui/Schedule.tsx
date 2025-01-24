@@ -9,16 +9,16 @@ export function Schedule() {
       <ul className="space-y-2 text-gray-400">
         <li className="flex items-center justify-center md:justify-start gap-2">
           <Clock9 className="w-5 h-5 text-pink-300" />
-          Lunes - Viernes: 9:00 - 21:00
-        </li>
-        <li className="flex items-center justify-center md:justify-start gap-2">
-          <Clock9 className="w-5 h-5 text-pink-300" />
-          Sábado: 9:00 - 14:00
+          Lunes - Jueves: 4:30 - 07:00
         </li>
         <li className="flex items-center justify-center md:justify-start gap-2">
           <X className="w-5 h-5 text-pink-300" />
-          Domingo: Cerrado
+          Sábado y Domingo: Cerrado
         </li>
+        {/* <li className="flex items-center justify-center md:justify-start gap-2">
+          <X className="w-5 h-5 text-pink-300" />
+          Domingo: Cerrado
+        </li> */}
       </ul>
     </div>
   );

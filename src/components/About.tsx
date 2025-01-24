@@ -61,12 +61,16 @@ export default function About() {
             ejecutar diversas técnicas.​ ​ Ven y sé parte de nuestra comunidad
             Karina Gym.​ <br />
             <br />
-            <div className="relative inline-block px-6 py-3 text-white text-md font-semibold bg-pink-300 rounded-full shadow-lg transform hover:scale-105 transition-transform">
-          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-500 to-purple-500 opacity-75 rounded-full"></span>
-          <span className="relative z-10 uppercase">
-            Inscripciones Abiertas
-          </span>
-        </div>
+            
+            <div className="relative inline-block px-8 py-3 text-white text-md font-semibold bg-pink-300 shadow-lg transform hover:scale-105 transition-transform">
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-500 to-purple-500 opacity-75"></span>
+              <span className="relative z-10 uppercase">
+                Inscripciones Abiertas
+              </span>
+              {/* Puntas de la cinta */}
+              <div className="absolute top-1/2 left-0 h-6 w-6 bg-white transform -translate-y-1/2 -translate-x-3 rotate-45"></div>
+              <div className="absolute top-1/2 right-0 h-6 w-6 bg-white transform -translate-y-1/2 translate-x-3 rotate-45"></div>
+            </div>
           </p>
         </div>
 

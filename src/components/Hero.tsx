@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ScrollReveal from "scrollreveal";
 import { ArrowRight } from "lucide-react";
-import img2 from "../assets/gallery-img/hero.jpg";
+import img2 from "../assets/gallery-img/img-hero.jpeg";
 import clase from "../assets/clase-muestra.jpeg";
 
 export default function Hero() {
@@ -72,7 +72,7 @@ export default function Hero() {
           className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl mx-auto"
         >
           Formamos bailarinas con pasión, disciplina y creatividad en un
-          ambiente seguro y divertido
+          ambiente seguro y divertido.
         </p>
         <div
           id="hero-buttons"
