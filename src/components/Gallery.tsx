@@ -121,24 +121,6 @@ export default function Gallery() {
                 </div>
               </SwiperSlide>
             ))}
-
-            {/* {images.map((image, index) => (
-              <SwiperSlide key={index} className="w-full md:w-3/4 lg:w-2/3">
-                <div className="relative overflow-hidden rounded-lg group aspect-video">
-                  <img
-                    src={image.url}
-                    alt={`Imagen ${index + 1}`}
-                    className="w-full h-full object-contain transform transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-white text-lg font-medium">
-                      {`Imagen ${index + 1}`}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))} */}
-
           </Swiper>
         </div>
       </div>

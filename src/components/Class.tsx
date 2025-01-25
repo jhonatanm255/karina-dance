@@ -58,13 +58,13 @@ export default function Class() {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="achievement-card bg-white lg:h-[460px] rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105"
+              className="achievement-card bg-white lg:h-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105"
             >
               <div>
                 <img
                   src={achievement.image}
                   alt={achievement.description}
-                  className="w-full lg:h-96 lg:object-cover rounded-t-lg" // Imagen más alta
+                  className="w-full lg:h-96 lg:object-cover rounded-lg" // Imagen más alta
                 />
               </div>
               {/* <div className="flex justify-center">
