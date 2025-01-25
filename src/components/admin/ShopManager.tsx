@@ -140,7 +140,7 @@ export default function ShopManager() {
     <div className="space-y-6">
       {error && <p className="text-red-500">{error}</p>}
 
-      <p className="mb-4 text-gray-600 text-sm">
+      <p className="mb-4 px-4 text-gray-600 text-sm">
         El tamaño ideal para las imagenes es de 280px de ancho por 285px de alto
       </p>
 
