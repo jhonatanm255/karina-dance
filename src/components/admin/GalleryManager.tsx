@@ -90,7 +90,8 @@ export default function GalleryManager() {
   return (
     <div className="space-y-6">
       <div className="bg-white p-6 rounded-lg shadow">
-        <h3 className="text-lg font-medium mb-4">Subir Nueva Imagen</h3>
+        <h3 className="text-lg font-medium mb-2">Subir Nueva Imagen</h3>
+        <p className="mb-4 text-gray-600 text-sm">El tamaño ideal para subir imagenes es de 1024px de ancho por 600px de alto</p>
         <label className="block">
           <span className="sr-only">Seleccionar imagen</span>
           <input

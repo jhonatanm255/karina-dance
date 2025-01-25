@@ -140,6 +140,10 @@ export default function ShopManager() {
     <div className="space-y-6">
       {error && <p className="text-red-500">{error}</p>}
 
+      <p className="mb-4 text-gray-600 text-sm">
+        El tamaño ideal para las imagenes es de 280px de ancho por 285px de alto
+      </p>
+
       <button
         onClick={() => setIsAdding(true)}
         className="flex items-center px-4 py-2 bg-pink-500 text-white rounded-md"
@@ -188,7 +192,12 @@ export default function ShopManager() {
               type="file"
               accept="image/*"
               onChange={handleImageUpload}
-              className="w-full"
+              className="block w-full text-sm text-gray-500
+              file:mr-4 file:py-2 file:px-4
+              file:rounded-full file:border-0
+              file:text-sm file:font-semibold
+              file:bg-pink-50 file:text-pink-700
+              hover:file:bg-pink-100"
             />
             <button
               onClick={handleAdd}
@@ -283,7 +292,7 @@ export default function ShopManager() {
                   <div className="flex space-x-2">
                     <button
                       onClick={() => setEditingId(product.id)}
-                      className="text-gray-500"
+                      className="text-gray-500 hover:text-gray-700"
                     >
                       <Edit2 className="w-5 h-5" />
                     </button>
