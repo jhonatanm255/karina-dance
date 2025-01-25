@@ -8,9 +8,10 @@ export function ContactInfo() {
         <li className="flex items-start justify-center md:justify-start space-x-2">
           <MapPin className="w-5 h-5 text-pink-300 flex-shrink-0" />
           <span className="text-gray-400">
-            Flor de Verónica 102, Col. Las Gaviotas <br />
+            Flor de Verónica 102, <br />Col. Gaviotas Norte <br />
             (entrada fracc. Rinconada <br />
-            casi esq. con malecón)
+            casi esq. con malecón) <br />
+            Villahermosa - Tabasco
           </span>
         </li>
         <li className="flex items-center justify-center md:justify-start space-x-2">

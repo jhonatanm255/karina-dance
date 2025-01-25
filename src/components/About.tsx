@@ -54,7 +54,7 @@ export default function About() {
             de baile televisa Región Sureste, Carnaval de Villahermosa,
             Interjuvenil de baile Tabasco, por mencionar algunos.​ ​ En la
             actualidad se imparten las disciplinas de danza jazz, acrodance,
-            danza árabe, danza aérea y sensual dance. Cotando con un cuerpo de
+            danza árabe, danza aérea y sensual dance. Contando con un cuerpo de
             profesores especializados en sus aéreas.​ ​ En la Academia de danza
             Karina Gym ofrecemos clases a partir de 3 años, y con un proyecto
             actual de danza sensual para mayores de edad en donde se aprende a

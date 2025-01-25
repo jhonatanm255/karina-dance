@@ -67,11 +67,11 @@ export default function Class() {
                   className="w-full lg:h-96 lg:object-cover rounded-t-lg" // Imagen más alta
                 />
               </div>
-              <div className="flex justify-center">
+              {/* <div className="flex justify-center">
                 <p className="text-pink-500 rounded-full bg-pink-50 inline-block text-center px-8 py-2 my-4">
                   {achievement.description}
                 </p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
