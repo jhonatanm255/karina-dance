@@ -64,7 +64,7 @@ export default function Instructor() {
               Acrodance y Danza Aérea. Promotora cultural de danza contemporánea
               y ganadora de diversos premios en concursos de baile a nivel
               nacional, como el Intercolegial de Televisa, el Carnaval de
-              Villahermosa y Javo Producciones. Experiencia en la organización
+              Villahermosa y Eidac. Experiencia en la organización
               de festivales de danza, montaje escénico para colegios y cursos de
               capacitación en materia de danza. Especialista en el montaje de
               vals de XV años, coreografías para bodas, entre otros. Amplia

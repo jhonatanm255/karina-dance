@@ -18,7 +18,7 @@ export function SocialLinks() {
         <Instagram className="w-6 h-6" />
       </a>
       <a
-        href="#"
+        href="https://www.youtube.com/@academiadedanzakarinagym6476"
         target="_blank"
         className="text-gray-400 hover:text-pink-300 transition-colors"
       >
