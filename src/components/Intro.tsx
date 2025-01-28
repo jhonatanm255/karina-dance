@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Ballerina from "../assets/ballerina-2.mp4";
+import Ballerina from "../assets/intro.mp4";
 
 export default function Intro() {
   const [loading, setLoading] = useState(true);
@@ -20,7 +20,7 @@ export default function Intro() {
         autoPlay
         muted
         playsInline
-        className="w-full h-full object-cover opacity-50"
+        className="w-full h-full object-cover opacity-40"
       >
         <source src={Ballerina} type="video/mp4" />
         Your browser does not support the video tag.
